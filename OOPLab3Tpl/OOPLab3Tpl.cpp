@@ -4,21 +4,33 @@
 //
 
 #include <iostream>
+using namespace std;
 
 // Ваші файли загловки 
 //
 #include "Lab3Expaple.h"
 int main()
 {
-    std::cout << " Lab #3  !\n";
+    std::cout << "Lab #3  !\n";
 //  Код виконання завдань
 //  Головне меню завдань
 //  Функції та класи можуть знаходитись в інших файлах проекту
+    while (true) {
+        int task;
 
-    int conv = 1;
-    if (conv == 1) conv = mainExample1();
-    if (conv == 1) conv = mainExample3(); 
-    if (conv == 1) conv = mainExample4();
+        cout << "\nSelect the number of exercise that you want to see\n\n";
+
+        cin >> task;
+
+        switch (task)
+        {
+        case 1: { Ex1(); break; }
+        case 2: { Ex2(); break; }
+        case 3: { Ex3(); break; } 
+        default:
+            break;
+        }
+    }
 
 }
 
